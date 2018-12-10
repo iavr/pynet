@@ -20,7 +20,7 @@ Directory structure
 Requirements
 ------------
 
-`pynet` has been tested on Python 2.7.6. It does not have any requirements other than basic Python libraries, in particular `sys`, `math`, `numpy`, `matplotlib`, `copy`, `time`, `itertools`, `contextlib`.
+`pynet` has been tested on Python 2.7.6. It does not have any requirements other than common Python libraries, in particular `math`, `numpy`, `matplotlib`, `sys`, `string`, `copy`, `time`, `itertools`, `contextlib`.
 
 Usage
 -----
