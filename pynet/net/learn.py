@@ -5,7 +5,8 @@ from defn import fix, net, param
 # shuffle array and return it
 shuffle = np.random.permutation
 
-# split a set of sequences into batches, optionally shuffled  # TODO: shuffle
+# split a set of sequences into batches,
+# optionally shuffled (choose 'order=shuffle' for that)
 def split(step, order=iota):
 	def fun(X, step):
 		def gen():
