@@ -1,9 +1,9 @@
-import sys
-import math
+import sys, math
+from os.path import dirname, abspath
 import numpy as np
 import matplotlib.pyplot as plt
 
-sys.path.append('..')
+sys.path.append(dirname(dirname(abspath(__file__))))
 from pynet import __, timer
 import pynet as pn
 import models
@@ -39,7 +39,7 @@ def main(display=False, save=False):
 	seq = pn.split(batch)(data)   # split data
 
 	# learning parameters
-	rate = 1e-0   # learning rate
+	rate = 5e-1   # learning rate
 	decay = 1e-3  # weight decay parameter
 	data_loss = pn.logistic()
 	reg_loss = pn.l2_reg(decay)
@@ -48,7 +48,7 @@ def main(display=False, save=False):
 	# learn classifiers
 	for (model, name, epochs) in (
 			(linear, "linear", 50),
-			(two_layer, "two-layer", 300),
+			(two_layer, "two-layer", 1200),
 		):
 
 		print("\n%s classifier:" % name)

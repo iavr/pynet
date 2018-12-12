@@ -96,7 +96,7 @@ def two_layer(X, y, K, plot=True, save=False):
 	reg = 1e-3 # regularization strength
 
 	# gradient descent loop
-	for i in xrange(2000):
+	for i in xrange(3000):
 
 		# evaluate class scores, [N x K]
 		hidden_layer = np.maximum(0, np.dot(X, W) + b) # note, ReLU activation

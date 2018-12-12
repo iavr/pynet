@@ -20,14 +20,14 @@ Directory structure
 Requirements
 ------------
 
-`pynet` has been tested on Python 2.7.6. It does not have any requirements other than common Python libraries, in particular `math`, `numpy`, `matplotlib`, `sys`, `string`, `copy`, `time`, `itertools`, `contextlib`.
+`pynet` has been tested on Python 2.7.6. It does not have any requirements other than common Python libraries, in particular `math`, `numpy`, `matplotlib`, `sys`, `os`, `string`, `copy`, `time`, `itertools`, `contextlib`.
 
 Usage
 -----
 
 The usage of `pynet` is demonstrated through a toy machine learning example, given in two versions
 
-	python spiral00.py
-	python spiral.py
+	python examples/spiral00.py
+	python examples/spiral.py -d
 
-both in directory `/examples`. The first version is a single-file independent implementation that is not using the library, and the second is adapted with the use of `pynet`. Try `python spiral.py -h` for options.
+The first version is a single-file independent implementation that is not using the library, and the second is adapted with the use of `pynet`. Try `-h` for options.
