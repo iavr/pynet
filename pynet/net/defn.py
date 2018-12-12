@@ -1,6 +1,6 @@
 import numpy as np
 from .. import lib
-from ..lib import __, any_, do, given, id, is_, has, none, not_
+from ..lib import __, any_, given, id, is_, has, none, not_
 from ..lib import vec, vector
 from net import net
 
@@ -241,8 +241,9 @@ class fun(unit):
 		test = fixed(a)
 		out = self._unit__fun(test, *a, **k)
 		if test: return ret(out)
-		opt = lambda *a: lib.method('back', *a)
-		back = lambda *_: do(opt(*c.arg)(c.out) for c in lib.flip(ret.seq))
+		def back(*_):
+			for c in lib.flip(ret.seq):
+				lib.method('back', *c.arg)(c.out)
 		return ret(block(out, back, pre=self._unit__pre))
 
 #-----------------------------------------------------------------------------

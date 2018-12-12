@@ -60,11 +60,6 @@ def let(var, val):
 
 #------------------------------------------------------------------------------
 
-# pack/unpack parameters
-pack = lambda f: lambda a: f(*a)
-unpack = lambda f: lambda *a: f(a)
-do = pack(none)
-
 # tuple/list utilities
 elem = lambda i: lambda *a: a[i]
 flip = lambda x: reversed(x)
@@ -112,8 +107,6 @@ loop  = lambda f, **k: reduce(none, f, **k)
 any_  = lambda f=id, **k: reduce(any, f, **k)
 all_  = lambda f=id, **k: reduce(all, f, **k)
 sum_  = lambda f=id, **k: reduce(sum, f, **k)
-flat  = lambda f=id, **k: reduce(pack(tup), f, **k)
-first = lambda f=id, **k: reduce(pack(car), f, **k)
 
 # loop on f conditioned on c / recursive filtering
 loop_if = lambda c, **k: lambda f: loop(lambda *x: f(*x) if c(*x) else __, **k)
