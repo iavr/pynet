@@ -11,7 +11,7 @@ from net import net
 
 #-----------------------------------------------------------------------------
 # an object is variable if it contains a member called diff() representing a
-# derivative (this may be a cell, node or block (see below). an object or list
+# derivative. this may be a cell, node or block (see below). an object or list
 # can become variable by calling var(), which introduces derivatives.
 # only_var() keeps only variables from a list and replaces each fixed object
 # by __, for which updates by operator += are ignored. a list is fixed if it
